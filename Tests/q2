@@ -1,0 +1,3 @@
+right 270
+for 8 [ forward 10 right 45 forward 10 right 135 ]
+for 4 [ forward 4 right 90 ]

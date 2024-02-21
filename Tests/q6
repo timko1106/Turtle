@@ -1,0 +1,5 @@
+for 2 [ forward 7 right 90 forward 18 right 90 ]
+up
+backward -2 right 90 forward 9 left 90
+down
+for 3 [ forward 8 right 120 ]
