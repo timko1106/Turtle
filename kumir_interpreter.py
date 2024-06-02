@@ -179,6 +179,7 @@ def main ():
     sc = turtle.Screen()
     tur = turtle.Turtle()
     tur.speed ("fastest")
+    turtle.tracer (False, 0)
     xcount = args.xcount
     ycount = args.ycount
     size = args.size
@@ -199,7 +200,7 @@ def main ():
             tur.color (default_color)
         else:
             tur.forward (mv)
-    sc.setup(xcount * size, ycount * size)
+    sc.setup (xcount * size, ycount * size)
     tur.up()
     tur.setpos(xshift, yshift)
     tur.down()
@@ -218,11 +219,12 @@ def main ():
     tur.setheading(90)
     tur.down()
     tur.color ("red")
+    turtle.tracer (True, 0)
     input_locals = {"tur" : tur, "size" : size, "isclose" : isclose, "sin" : sin, "cos" : cos, "asin" : asin, "acos" : acos, "pi" : pi}
     
     exec (compile(func + "\n__temp__()", "<string>", mode="exec"), input_locals)
     print ("Done!")
-    time.sleep (120)
+    sc.mainloop ()
     #tur.hideturtle()
 if __name__ == "__main__":
     try:
